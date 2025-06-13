@@ -23,6 +23,7 @@
     justify-items: center;
 }
 
+
 .titulo_inicio{
     color: white;
     font-size: 3em;
@@ -257,25 +258,39 @@ footer a{
 /* RESPONSIVE ------------------------------------------------------------------------------------------------------ */
 @media (max-width: 768px) {
     .contenedor_inicio{
-        grid-template-areas: 
-            "titulo"
-            "parrafo"
-            "imagen";
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .titulo_inicio{
+        width: 50vw;
     }
     .contenedor_nosotros{
         flex-direction: column;
         padding: 20px;
     }
     .contenedor_texto{
+        width: 99vw;
+        height: auto;
+    }
+
+    .titulo_inicio{
         width: 100%;
     }
+    
     .contenedor_contacto{
         flex-direction: column;
-        align-items: center;
+        align-items:center;
     }
     .contenedor_formu{
         flex-direction: column;
         width: 100%;
+    }
+    .contenedor_parrafo_contacto{
+        display: none;
+    }
+    .formu{
+        width: fit-content;
     }
     footer{
         flex-direction: column;
